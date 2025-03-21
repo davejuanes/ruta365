@@ -1,0 +1,65 @@
+{
+    "roads": [
+      {
+        "name": "Ruta 1",
+        "font": "ABC Transport",
+        "IMG": "https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/484918364_1065360845620418_979300013621123843_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=htTluPrtEAIQ7kNvgHY7ltF&_nc_oc=Adlv0ZYiis4Ezn-_Ji_h0_YnunlMNVpmQSnorQya-2DqUYCST23bLu2AUBL3Sa6E264&_nc_zt=23&_nc_ht=scontent.fvvi1-1.fna&_nc_gid=SaKB1Bv-neH7Q3kHeYh2QA&oh=00_AYEVgNNB05vSGG-g51UqQNVF_emiVgdpJDaIsZjuIXH4-Q&oe=67E0EE90",
+        "description": "Conecta La Paz con Villazón, pasando por Oruro y Potosí."
+      },
+      {
+        "name": "Ruta 3",
+        "font": "ABC Transport",
+        "IMG": "https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/485310648_1065360885620414_5563853491245960850_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=scWy6eRnwdAQ7kNvgEaU7UO&_nc_oc=AdkpYpR0eAM54sai6cGXq4jiQl3bzS9Gp4Zg5-TBqZ-LUeUp2QmUN5DYKzNj3p029TU&_nc_zt=23&_nc_ht=scontent.fvvi1-1.fna&_nc_gid=ENT1-lvBoZaWneC86DbTbQ&oh=00_AYE0Vn1mvz0oqSqTJFYhcVdwGTyuPnnnDG-kfzva7U0IYg&oe=67E0F75E",
+        "description": "Une La Paz con Trinidad, atravesando los Yungas y la Amazonía."
+      },
+      {
+        "name": "Ruta 4",
+        "font": "ABC Transport",
+        "IMG": "https://scontent.fvvi1-2.fna.fbcdn.net/v/t39.30808-6/484918718_1065083688981467_6729056212633352177_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=2omTpmROF5QQ7kNvgEgyu3H&_nc_oc=AdklEqnaYmmlwIeEeuKx0HHunXTwszIURXCvRNYdu0hlgiCbsRIn1M9a5uFBNB71j1w&_nc_zt=23&_nc_ht=scontent.fvvi1-2.fna&_nc_gid=B5CY81919jr4Y9_D7105HA&oh=00_AYHHSC-MsT08d8zpgXGtAu0RMql3FqW5_n7FkC3NmrdFpA&oe=67E0E037",
+        "description": "Conecta Tambo Quemado con Santa Cruz, pasando por Cochabamba."
+      },
+      {
+        "name": "Ruta 9",
+        "font": "ABC Transport",
+        "IMG": "https://scontent.fvvi1-2.fna.fbcdn.net/v/t39.30808-6/484941522_1065360818953754_2039028767441049912_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=aXjO4YvQVcQQ7kNvgEWFomy&_nc_oc=AdkGuSemeHsebwRsZ56A1upWfytzhsYb3Qu8QjUTK72Dk8dYeB-DLAQi6e1rrcrUHfs&_nc_zt=23&_nc_ht=scontent.fvvi1-2.fna&_nc_gid=IKQr6NKsEbg0zju8ZdDWDw&oh=00_AYFI1lpDhoF1rU9T7KjiIc5dWd-QOD4G9sdQAPZ4maN7rA&oe=67E0E7E3",
+        "description": "Carretera troncal que une Yacuiba con Guayaramerín a través del oriente boliviano."
+      },
+      {
+        "name": "Ruta 10",
+        "font": "Ministerio de Transporte",
+        "IMG": "https://scontent.fvvi1-2.fna.fbcdn.net/v/t39.30808-6/484916761_1065083682314801_3999788308335676914_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=g2Zg2amkVqcQ7kNvgGHwdgK&_nc_oc=AdnOvRarv9ttmfiChfFG7eNN1Di7zH_wcPGTiAvoAml3bjImgkhQ639qxphSoSRczUI&_nc_zt=23&_nc_ht=scontent.fvvi1-2.fna&_nc_gid=cgMlfhks0X_b15NGTbTd2A&oh=00_AYHNryzdEz5RLkc19ogf5gbru1ktCAhJ1A2av29DFaVSMA&oe=67E0F7B2",
+        "description": "Conecta San Matías con San Ignacio de Velasco y Santa Cruz."
+      },
+      {
+        "name": "Ruta 11",
+        "font": "ABC Transport",
+        "IMG": "https://scontent.fvvi1-2.fna.fbcdn.net/v/t39.30808-6/484902906_1063618929127943_3081005038545544115_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BIjdK7CQbYEQ7kNvgFsm9wE&_nc_oc=AdnVc_5uRANBdfcCxU69l4vmXOFUojUy1FZiTYsoQYMV7onx8gwWSKXZqgwfaYi69Ac&_nc_zt=23&_nc_ht=scontent.fvvi1-2.fna&_nc_gid=yg8lHUX7BiqZ_JjKksVXKA&oh=00_AYHnP1ObxEXB44TbnTq4hIp8BraUpDK_kVKPDzdg9Z-FkQ&oe=67E0DBAB",
+        "description": "Carretera que comunica Puerto Suárez con Santa Cruz de la Sierra."
+      },
+      {
+        "name": "Ruta 12",
+        "font": "ABC Transport",
+        "IMG": "https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/485405788_1063618905794612_3315825205755249434_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-oLBznMLG-cQ7kNvgEdS8Sx&_nc_oc=Admkq-4Vt-DfXgF8XuN2OUzgiIF4JUUqslDbo47sEZobOmMMnuJn49kVB55iOaie8e4&_nc_zt=23&_nc_ht=scontent.fvvi1-1.fna&_nc_gid=0tk4BykCd1joVaalR_4ZAQ&oh=00_AYEMuBaM_DS3Wn5laNQP7IkgrFZ2yuxpjKSJe1e438xeuQ&oe=67E0E2DB",
+        "description": "Conecta Cobija con La Paz a través del departamento de Pando."
+      },
+      {
+        "name": "Ruta 16",
+        "font": "ABC Transport",
+        "IMG": "https://scontent.fvvi1-2.fna.fbcdn.net/v/t39.30808-6/484902587_1062156029274233_5299902350860245657_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rfb8Jvagr-AQ7kNvgF7QLIt&_nc_oc=AdkzFCGdzoP-H8_e80C0B2r2k4Pjsx5bUlYABTbvOgOUypsEvdaPPZ6co-yt3tSJ_3Q&_nc_zt=23&_nc_ht=scontent.fvvi1-2.fna&_nc_gid=2dLWF2WP50bbyAKQFz5xxw&oh=00_AYH2-aY8AOujQeG0Ne5xnnmX3_854SFWBsM-iYXmFG-tBg&oe=67E0C651",
+        "description": "Carretera que une Montero con Guabirá, pasando por varias comunidades."
+      },
+      {
+        "name": "Ruta 17",
+        "font": "Ministerio de Transporte",
+        "IMG": "https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/480968516_1061905599299276_7884490617205338951_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=9Itt_0jgy0QQ7kNvgG_Jx6f&_nc_oc=AdlmXUE29ai4_ZOasCTWUarRFOvxRCEuydmNIlkTTbrI0UG3z_DSAj0b3tjGQsgvW5U&_nc_zt=23&_nc_ht=scontent.fvvi1-1.fna&_nc_gid=-kBNcJ7vMON8MOIkAGZ-Bw&oh=00_AYEAFLQFl0p3RjEqaVTsrLP4dTnfzAam_GhqZtKneXbOQw&oe=67E0EA05",
+        "description": "Conecta Uyuni con Hito Cajones, facilitando el acceso a Chile."
+      },
+      {
+        "name": "Ruta 30",
+        "font": "ABC Transport",
+        "IMG": "https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/481240496_1061905589299277_6513061325806075725_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=-2BKpk8j8ssQ7kNvgGOPrjJ&_nc_oc=Adl84UNCheYZ1vrcyd59Un_ejlegY1I8Q5L3ZAkfjeQqCX_AXJ0AjuJ-5oqDevuZB2k&_nc_zt=23&_nc_ht=scontent.fvvi1-1.fna&_nc_gid=98CwWCYrKSc6ZrLZYfwbKg&oh=00_AYHS4FqUhInZofXWKwSH0p4dwNqxLqgApGizjfSv4gqREg&oe=67E0ED75",
+        "description": "Carretera que une San Ignacio de Velasco con San Rafael."
+      }
+    ]
+  }
+  

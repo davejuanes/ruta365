@@ -1,34 +1,19 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:recipe_book/providers/roads_provider.dart';
 import 'package:recipe_book/screens/road_detail.dart';
 import 'package:http/http.dart' as http;
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  Future<List<dynamic>> FetchRoads() async {
-    // Android 10.0.2.2
-    // IOS 127.0.0.1
-    final url = Uri.parse('http://localhost:3001/roads');
-    try { 
-      final response = await http.get(url);
-      if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-        return data['roads'];
-      } else {
-        print('Error: ${response.statusCode}');
-        return [];
-      }
-    } catch (e) {
-      print('Error in request');
-      return [];
-    }
-    
-    
-  }
+  
   @override
   Widget build(BuildContext context) {
+    final roadsProvider = Provider.of<RoadsProvider>(context, listen: false);
+    roadsProvider.fetchRoads();
     return Scaffold(
       body: FutureBuilder(
         future: FetchRoads(),
