@@ -7,10 +7,11 @@ import 'package:http/http.dart' as http;
 class RoadsProvider extends ChangeNotifier {
   bool isLoading = false;
   List<Road> roads = [];
+  List<Road> favoriteRoad = [];
 
+  // Android 10.0.2.2
+  // IOS 127.0.0.1
   Future<void> fetchRoads() async {
-    // Android 10.0.2.2
-    // IOS 127.0.0.1
     isLoading = true;
     notifyListeners();
 
@@ -19,7 +20,8 @@ class RoadsProvider extends ChangeNotifier {
       final response = await http.get(url);
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-        roads = List<Road>.from(data.map((road) => Road.fromJson(road)));
+        roads = List<Road>.from(data['roads']
+        .map((road) => Road.fromJson(road)));
       } else {
         print('Error: ${response.statusCode}');
         roads = [];
@@ -30,6 +32,30 @@ class RoadsProvider extends ChangeNotifier {
     } finally {
       isLoading = false;
       notifyListeners();
+    }
+  }
+
+  Future<void> toggleFavoriteStatus(Road road) async {
+    final isFavorite = favoriteRoad.contains(road);
+    try {
+      final url = Uri.parse('http://localhost:3001/favorites');
+      final response = isFavorite
+        ? await http.delete(url, body: json.encode({"id": road.id}))
+        : await http.post(url, body: json.encode(road.toJson()));
+        ;
+        if (response.statusCode == 200) {
+          if (isFavorite) {
+            favoriteRoad.remove(road);
+          } else {
+            favoriteRoad.add(road);
+          }
+          notifyListeners();
+        } else {
+          print('Error: ${response.statusCode}');
+          throw Exception('Failed to uodate favorite roads');
+        }
+    } catch (e) {
+      print('Error updating favorite roads $e');
     }
   }
 }

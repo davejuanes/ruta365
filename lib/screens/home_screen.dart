@@ -1,42 +1,35 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:recipe_book/providers/roads_provider.dart';
 import 'package:recipe_book/screens/road_detail.dart';
-import 'package:http/http.dart' as http;
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  
   @override
   Widget build(BuildContext context) {
     final roadsProvider = Provider.of<RoadsProvider>(context, listen: false);
     roadsProvider.fetchRoads();
+
     return Scaffold(
-      body: FutureBuilder(
-        future: FetchRoads(),
-        builder: (context, snapshot) {
-          final roads = snapshot.data ?? [];
-          if (snapshot.connectionState == ConnectionState.waiting) {
+      body: Consumer<RoadsProvider>(
+        builder: (context, provider, child) {
+          // print('Aquí: ${provider.roads}');
+          if (provider.isLoading) {
             return const Center(child: CircularProgressIndicator());
-          } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+          }
+          else if (provider.roads.isEmpty) {
             return const Center(child: Text('No roads found'));
           } else {
             return ListView.builder(
-            itemCount: roads.length,
+            itemCount: provider.roads.length,
             itemBuilder: (context, index) {
-              return _RecipeCard(context, roads[index]);
+              return _RoadCard(context, provider.roads[index]);
             }
           );
           }
         }
       ),
-      // Column(children: <Widget>[
-      //   _RecipeCard(context),
-      //   _RecipeCard(context)
-      // ],),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.blue[900],
         child: Icon(Icons.add, color: Colors.white),
@@ -60,10 +53,10 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _RecipeCard(BuildContext context, dynamic road) {
+  Widget _RoadCard(BuildContext context, dynamic road) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => RoadDetail(roadName: road['name'])));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => RoadDetail(roadsData: road.name)));
       },
       child: Padding(
         padding: const EdgeInsets.all(6),
@@ -79,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.network(
-                        road['IMG'],
+                        road.img,
                         fit: BoxFit.cover),
                     ),
                   ),
@@ -88,14 +81,14 @@ class HomeScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(road['name'], style: TextStyle(fontSize: 16, fontFamily: 'Quicksand'),),
+                      Text(road.name, style: TextStyle(fontSize: 16, fontFamily: 'Quicksand'),),
                       SizedBox(height: 4),
                       Container(
                         height: 2,
                         width: 75,
                         color: Colors.blue,
                       ),
-                      Text(road['font'], style: TextStyle(fontSize: 16, fontFamily: 'Quicksand'),),
+                      Text(road.font, style: const TextStyle(fontSize: 16, fontFamily: 'Quicksand'),),
                       SizedBox(height: 4),
                     ],
                   )
